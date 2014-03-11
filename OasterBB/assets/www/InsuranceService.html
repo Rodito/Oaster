@@ -1,0 +1,143 @@
+<html> 
+<head> 
+	<title>Insurance Service</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.3.2.min.css" />
+
+	<script src="jquery.mobile/jquery-1.9.1.min.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.3.2.js"></script>
+	<style>
+
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+    	height: 435px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+    	min-height: 435px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	.panel-content { padding:0px; }
+	</style>
+	<script type="text/javascript">
+	        function Map(){
+	        	activity.Map();
+	        }      
+    </script>
+    
+    <script type="text/javascript">
+	        function Bill(){
+	        	activity.Bill();
+	        }      
+    </script>
+    
+    <script type="text/javascript">
+	        function Claim(){
+	        	activity.Claim();
+	        }      
+    </script>
+
+	<script type="text/javascript">
+	        function Benefit(){
+	        	activity.Benefit();
+	        }      
+    </script>
+
+</head> 
+
+
+<body> 
+
+	<div data-role="page" style="max-height:440px; min-height:440px;" class="type-home" class="ui-responsive-panel" >
+	
+		<div data-role="header" data-theme="b">
+    		<h1>Insurance Service</h1>
+			<a href="#leftpanel1" data-role="button" data-inline="true" data-mini="true">MENU</a>
+			<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
+				<a href="#rightpanel1" data-role="button" data-mini="true"  data-inline="true" data-icon="info" data-iconpos="notext">My Notification</a>
+				<a href="#rightpanel2" data-role="button" data-mini="true"  data-inline="true" data-icon="grid" data-iconpos="notext">My Insurance</a>
+			</div>
+		</div>
+		
+		<div data-role="content"> 
+    		<div data-role="collapsible" data-theme="b" data-content-theme="b" data-mini="true">
+			    <h4>Insurance Product # 1</h4>
+			    <p>This is the detail information of Insurance Product # 1</p>
+			</div>	
+			<div data-role="collapsible" data-theme="b" data-content-theme="d" data-mini="true">
+			    <h4>Insurance Product # 2</h4>
+			    <p>This is the detail information of Insurance Product # 2</p>
+			</div>	
+			<div data-role="collapsible" data-theme="b" data-content-theme="d" data-mini="true">
+			    <h4>Insurance Product # 3</h4>
+			    <p>This is the detail information of Insurance Product # 3</p>
+			</div>	
+		</div>    
+		
+		<!-- leftpanel1  -->
+		<div data-role="panel" id="leftpanel1" data-position="left" data-display="push" data-dismissible="true" data-theme="a" data-position-fixed="true" data-mini="true">
+			<div class="panel-content">
+			
+			<ul data-role="listview">
+ 				<div data-role="collapsible" data-theme="b" data-content-theme="d" data-mini="true">
+				    <h4>Setting</h4>
+				    
+				</div>	
+				<div data-role="collapsible" data-theme="b" data-content-theme="d" data-mini="true">
+				    <h4>My Profile</h4>
+				    <form>
+				    	<label for="text-4">ID Number:</label>
+					    <input type="text" data-mini="true" name="text-4" id="text-4" value="" disabled="disabled">
+					    <label for="text-4">Name:</label>
+					    <input type="text" data-mini="true" name="text-4" id="text-4" value="" disabled="disabled">
+					    <label for="textarea-4">Address:</label>
+					    <textarea data-mini="true" cols="40" rows="8" name="textarea-4" id="textarea-4" disabled="disabled"></textarea>
+					</form>
+				</div>	
+				<div data-role="collapsible" data-theme="b" data-content-theme="d" data-mini="true">
+				    <h4>System</h4>
+				    <p>Sign Out</p>
+				</div>	
+				</ul>
+			</div><!-- /content wrapper for padding -->
+		</div><!-- /leftpanel1 -->
+		
+		<!-- rightpanel1  -->
+		<div data-role="panel" id="rightpanel1" data-position="right" data-display="push" data-dismissible="true" data-theme="b" data-position-fixed="true" data-mini="true">
+			<div class="panel-content">
+				<ul>
+				<a href="#" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="star"  >Flag Selected As Read</a>
+				<a href="#" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="delete">Delete All Selected</a>
+				<a href="#" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="check" >Clear All Conversation</a>
+				<a href="#" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="check" >Select Item List</a>
+				<a href="#" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="check" >Select All Messages</a>
+				</ul>
+			</div><!-- /content wrapper for padding -->
+		</div><!-- /rightpanel1 -->
+		
+		<!-- rightpanel2  -->
+		<div data-role="panel" id="rightpanel2" data-position="right" data-display="push" data-dismissible="true" data-theme="b" data-position-fixed="true" data-mini="true">
+			<div class="panel-content">
+				<a href="#leftpanel1" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="add">Add Insurance</a>
+				<a href="#leftpanel1" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="delete">Delete Insurance</a>
+				<a href="#leftpanel1" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="check">Select Item List</a>
+				<a href="#leftpanel1" data-role="button" data-inline="true" data-mini="true" data-theme="b" data-icon="star">Select All Items</a>
+			</div><!-- /content wrapper for padding -->
+		</div><!-- /rightpanel2 -->
+		
+		<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#" onClick="Bill();">My Premium Bill</a></li>
+                <li><a href="#" onClick="Claim();">My Claim Transaction</a></li>
+                <li><a href="#" onClick="Map();">Merchant Arround</a></li>
+                <li><a href="#" onClick="Benefit()";>Benefit Registration</a></li>
+            </ul>
+        </div><!-- /navbar -->
+	</div><!-- /footer -->
+   	</div> 
+	
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<html> 
+<head> 
+	<title>Map</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.3.2.min.css" />
+
+	<script src="jquery.mobile/jquery-1.9.1.min.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.3.2.js"></script>
+	<style>
+
+	html, body { padding: 0; margin: 0; }
+	html, .ui-mobile, .ui-mobile body {
+    	height: 435px;
+	}
+	.ui-mobile, .ui-mobile .ui-page {
+    	min-height: 435px;
+	}
+	.ui-content{
+		padding:10px 15px 0px 15px;
+	}
+	.panel-content { padding:0px; }
+	</style>
+	
+	<style type="text/css">
+	  #map{
+	  display: block;
+	  width: 95%;
+	  height: 350px;
+	  margin: 0 auto;
+	  -moz-box-shadow: 0px 5px 20px #ccc;
+	  -webkit-box-shadow: 0px 5px 20px #ccc;
+	  box-shadow: 0px 5px 20px #ccc;
+	  }
+	  #map.large{
+	  height:500px;
+	  }
+	 </style>
+	 
+	<script type="text/javascript">
+    $(document).ready(function(){
+        var map = new GMaps({
+              div: '#map',
+              lat: -7.458449,
+              lng: 110.221946
+        });
+        map.addMarker({
+            lat: -7.458449,
+            lng: 110.221946,
+            title: 'Oastera',
+            infoWindow: {
+                content: '<b>Oase Teknologi Nusantara</b><br /> \n\
+                          Jl. Pahlawan No. 134 B Kota Magelang, Jawa Tengah Indonesia'
+            }
+        });
+    });
+  </script>
+    
+  <script type="text/javascript" src="jquery.mobile/jquery.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="jquery.mobile/gmaps.js"></script>
+  
+  <script type="text/javascript">
+	        function Map(){
+	        	activity.Map();
+	        }      
+    </script>
+    
+    <script type="text/javascript">
+	        function Bill(){
+	        	activity.Bill();
+	        }      
+    </script>
+    
+    <script type="text/javascript">
+	        function Claim(){
+	        	activity.Claim();
+	        }      
+    </script>
+
+	<script type="text/javascript">
+	        function Benefit(){
+	        	activity.Benefit();
+	        }      
+    </script>
+</head> 
+
+
+<body> 
+
+	<div data-role="page" style="max-height:440px; min-height:440px;" class="type-home" class="ui-responsive-panel">
+		<div data-role="header">
+    		<h1>MAP</h1>
+		</div>
+		<div data-role="content"> 
+			<div id="map"></div><br />
+		</div>    
+		<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar">
+            <ul>
+                <li><a href="#" onClick="Bill();">My Premium Bill</a></li>
+                <li><a href="#" onClick="Claim();">My Claim Transaction</a></li>
+                <li><a href="#" onClick="Map();">Merchant Arround</a></li>
+                <li><a href="#" onClick="Benefit();">Benefit Registration</a></li>
+            </ul>
+        </div><!-- /navbar -->
+	</div><!-- /footer -->
+   	</div> 
+
+</body>
+
+</html>
